@@ -87,7 +87,7 @@ p{
     text-align: center;
 }
 
-.card-content .card-content .card{
+.card-content .card{
     width: calc(33.333% - 20px);
     margin-bottom: 30px;
     border: 1px solid rgba(0, 0, 0, 0.06);
