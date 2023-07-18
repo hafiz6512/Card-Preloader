@@ -80,7 +80,7 @@ html {
     justify-content: center;
 }
 .card-content .card{
-    width: calc(33.333% - 60px);
+    width: calc(33.333% - 20px);
     margin-bottom: 30px;
     border: 1px solid rgba(0, 0, 0, 0.06);
 }
@@ -167,7 +167,7 @@ html {
 
 @media (max-width: 991px){
     .card-content .card{
-        width: calc(50% - 30px);
+        width: calc(50% - 20px);
     }
 
     .card-content .card .card-photo{
