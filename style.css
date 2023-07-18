@@ -1,6 +1,6 @@
 /*!
-Project Name: PixCover HTML
-Project URI: https://github.com/hafiz6512
+Project Name: Card Preloader HTML
+Project URI: https://hafiz6512.github.io/Card-Preloader/
 Author: Hafizur Rahman
 Author URI: https://github.com/hafiz6512
 Autthor Email: hafiz6512@gmail.com
@@ -8,7 +8,7 @@ Description: Card Preloader
 Version: 1.0.0
 License: GNU-MIT License Public License
 License URI: LICENSE
-Text Domain: card-preloader
+Text Domain: Card-Preloader
 */
 
 body{
@@ -25,6 +25,12 @@ html {
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
             box-sizing: border-box;
+}
+
+p{
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 0 0 10px;
 }
 
 .container{
@@ -59,19 +65,6 @@ html {
     margin: 0;
 }
 
-.card {
-    background-color: #fff;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-    padding: 16px;
-    border-radius: 6px;
-}
-
-.card .title {
-    font-weight: bold;
-    font-size: 24px;
-    text-transform: capitalize;
-}
-
 .card-content{
     display: flex;
     column-gap: 30px;
@@ -79,14 +72,29 @@ html {
     margin-top: 40px;
     justify-content: center;
 }
-.card-content .card{
+.card-content .card {
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    padding: 16px;
+    border-radius: 6px;
+}
+
+.card-content .card .card-title {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.3;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.card-content .card-content .card{
     width: calc(33.333% - 20px);
     margin-bottom: 30px;
     border: 1px solid rgba(0, 0, 0, 0.06);
 }
 .card-content .card .card-photo{
-    width: 280px;
-    height: 280px;
+    width: 240px;
+    height: 240px;
     margin: 0 auto 20px;
     border-radius: 50%;
     display: flex;
@@ -101,7 +109,13 @@ html {
     height: auto;
     border-radius: 50%;
 }
+.card-content .card p{
+    text-align: justify;
+}
 
+/**
+ * Preload Loading Class
+ */
 .loading{
     position: relative;
     overflow: hidden;
@@ -128,6 +142,7 @@ html {
     top: 0;
     left: 0;
 }
+
 @keyframes placeHolderLoading {
     0% {
         background-position: 100% 0;
@@ -137,6 +152,9 @@ html {
     }
 }
 
+/**
+ * FadeIn Animation
+ */
 .animate__animated {
     -webkit-animation-duration: 1s;
             animation-duration: 1s;
@@ -165,14 +183,17 @@ html {
     }
 }
 
+/**
+ * Responsive Card
+ */
 @media (max-width: 991px){
     .card-content .card{
         width: calc(50% - 20px);
     }
 
     .card-content .card .card-photo{
-        width: 200px;
-        height: 200px;
+        width: 180px;
+        height: 180px;
     }
 }
 
